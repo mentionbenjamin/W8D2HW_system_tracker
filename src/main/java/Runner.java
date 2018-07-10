@@ -1,9 +1,6 @@
 import db.DBHelper;
-import db.DBPirate;
-import db.DBShip;
-import models.Ship;
-import models.Pirate;
-import models.Weapon;
+import models.File;
+import models.Folder;
 
 import java.util.List;
 
@@ -11,18 +8,16 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        Ship pearl = new Ship("The Black Pearl");
-        DBHelper.save(pearl);
+        Folder folder1 = new Folder("Welcome Folder");
+        DBHelper.save(folder1);
 
-        Ship dutchman = new Ship("The Flying Dutchman");
-        DBHelper.save(dutchman);
-
-        File file1 = new File("Jack", "Sparrow", 32, Weapon.CUTLASS, pearl);
+        File file1 = new File("Welcome File", 200, ".txt", folder1);
         DBHelper.save(file1);
-        File file2 = new File("Hector", "Barbossa", 65, Weapon.PISTOL, pearl);
-        DBHelper.save(file2);
-        File file3 = new File("Will", "Turner", 23, Weapon.DAGGER, dutchman);
-        DBHelper.save(file3);
+        File file2 = new File("Second File", 100, ".java", folder1);
+        DBHelper.save(file1);
+        File file3 = new File("Third File", 50, ".ruby", folder1);
+        DBHelper.save(file1);
+
 
 
 
