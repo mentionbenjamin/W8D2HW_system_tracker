@@ -21,13 +21,11 @@ public class Runner {
 
 
 
-        List<Pirate> pirates = DBHelper.getAll(Pirate.class);
+        List<File> files = DBHelper.getAll(File.class);
 
-        Pirate foundPirate = DBHelper.find(Pirate.class, pirate1.getId());
+        File foundFile = DBHelper.find(File.class, file2.getId());
 
-        int damageValue = foundPirate.getWeapon().getDamageValue();
-
-        List<Pirate> piratesOnPearl = DBShip.getCrewForShip(pearl);
+//        List<File> piratesOnPearl = DBShip.getCrewForShip(pearl);
 
     }
 }
