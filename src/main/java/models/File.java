@@ -62,7 +62,6 @@ public class File {
         this.extension = extension;
     }
 
-
     @ManyToOne
     @JoinColumn(name = "folder_id", nullable = false)
     public Folder getFolder(){
