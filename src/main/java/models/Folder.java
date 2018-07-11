@@ -40,6 +40,7 @@ public class Folder {
         this.name = name;
     }
 
+
     // connect to file - one to many
     @OneToMany(mappedBy = "folder", fetch = FetchType.LAZY)
     public List<File> getFile(){
@@ -49,6 +50,7 @@ public class Folder {
     public void setFile(List<File> file){
         this.file = file;
     }
+
 
     // connect to owner - many to one
     @ManyToOne
